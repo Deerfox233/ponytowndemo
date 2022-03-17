@@ -1,1 +1,5 @@
 # ponytowndemo
+
+* 图片等资源文件请放在 /assets/image 下
+* HTML 文件请放在 /public 下
+* Javascript 请放在 /src 下（如果是 Typescript 请放在 /src/ts 下）
