@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../src/ts/pony-walk.js">
+        // let animationPhase = 0;
+        // let isReverse;
+        // function moveEvent(event){
+        //     let move = document.getElementById("move");
+        //     let ori = document.getElementById("ori");
+        //     switch (event.keyCode) {
+        //         case 37:
+        //             isReverse = false;
+        //             ori.style.backgroundImage = "url(assets/ori_walk.png)";
+        //             move.style.left = move.offsetLeft - 5 + "px";       //left
+        //             animationPhase -= 80;
+        //             break;
+        //         case 38:
+        //             move.style.top = move.offsetTop - 5 + "px";         //up
+        //             if (isReverse) {
+        //                 animationPhase += 80;
+        //             } else {
+        //                 animationPhase -= 80;
+        //             }
+        //             break;
+        //         case 39:
+        //             isReverse = true;
+        //             ori.style.backgroundImage = "url(assets/ori_walk_reverse.png)";
+        //             move.style.left = move.offsetLeft + 5 + "px";       //right
+        //             animationPhase += 80;
+        //             break;
+        //         case 40:
+        //             move.style.top = move.offsetTop + 5 + "px";     //down
+        //             if (isReverse) {
+        //                 animationPhase += 80;
+        //             } else {
+        //                 animationPhase -= 80;
+        //             }
+        //             break;
+        //     }
+        //     ori.style.backgroundPosition = animationPhase + "px";
+        // }
+    </script>
+    <style>
+        body {
+            /*background-color: #90ee90;*/
+            background-color: cornflowerblue;
+        }
+        #move {
+            position: absolute;
+        }
+        #ori {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url("../../assets/images/character/ori_walk.png");
+            background-position: -0px;
+        }
+        #shade {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            mix-blend-mode: soft-light;
+        }
+    </style>
+</head>
+<body onkeydown="moveEvent(event);">
+    <div id="move">
+        <div id="shade">
+            <svg>
+                <ellipse rx="20" ry="5" cx="43" cy="85"></ellipse>
+            </svg>
+        </div>
+        <div id="ori"></div>
+        <div id="name">test</div>
+    </div>
+</body>
+</html>
