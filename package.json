@@ -1,8 +1,13 @@
 {
   "name": "ponytowndemo",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "koa-route": "^3.2.0"
+  },
   "devDependencies": {
-    "axios": "^0.26.1"
+    "axios": "^0.26.1",
+    "koa": "^2.13.4",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0"
   }
 }

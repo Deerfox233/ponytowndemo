@@ -73,6 +73,13 @@
             </svg>
         </div>
         <div id="ori"></div>
+        <div id="username"></div>
     </div>
 </body>
+<script>
+    let username = window.location.search.substring(1);
+    username = username.split("=")[1];
+    let usernameDiv = document.getElementById("username");
+    usernameDiv.innerHTML = username;
+</script>
 </html>
