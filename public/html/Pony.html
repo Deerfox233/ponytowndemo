@@ -44,8 +44,8 @@
     </script>
     <style>
         body {
-            /*background-color: #90ee90;*/
-            background-color: cornflowerblue;
+            background-color: #90ee90;
+            /*background-color: cornflowerblue;*/
         }
         #move {
             position: absolute;
@@ -80,6 +80,8 @@
     let username = window.location.search.substring(1);
     username = username.split("=")[1];
     let usernameDiv = document.getElementById("username");
+    usernameDiv.style.fontFamily = "Futura";
+    usernameDiv.style.fontSize = "16px";
     usernameDiv.innerHTML = username;
 </script>
 </html>

@@ -11,61 +11,32 @@ const app = new Koa();
 
 const main = serve(path.join(__dirname));
 
-// const oauth = async context => {
-//     const code = context.request.query.code;
-//
-//     const getAccessToken = await axios({
-//         method: "POST",
-//         url: "https://github.com/login/oauth/access_token?client_id=" + `${clientID}` + "&client_secret=" + `${clientSecret}` + "&code=" + `${code}`,
-//         headers: {
-//             accept: "application/json"
-//         }
-//     });
-//
-//     const accessToken = getAccessToken.data.access_token;
-//
-//     const result = await axios({
-//         method: "GET",
-//         url: "https://api.github.com/user",
-//         headers:{
-//             accept: "application/json",
-//             authorization: "token " + `${accessToken}`
-//         }
-//     });
-//
-//     const username = result.data.name;
-//
-//     context.response.redirect("/public/html/Pony.html?username=" + `${username}`);
-// };
-//
-// app.use(main);
-// app.use(route.get("oauth/redirect", oauth()));
-// app.listen(8080);
-
 const oauth = async context => {
     const code = context.request.query.code;
-    console.log(code);
+    console.log("code: " + code);
 
     const getAccessToken = await axios({
-        method: 'POST',
+        method: "POST",
         url: "https://github.com/login/oauth/access_token?client_id=" + `${clientID}` + "&client_secret=" + `${clientSecret}` + "&code=" + `${code}`,
         headers: {
-            accept: 'application/json'
+            Accept: "application/json"
         }
     });
 
     const accessToken = getAccessToken.data.access_token;
+    console.log("access token: " + accessToken);
 
     const result = await axios({
         method: 'GET',
         url: "https://api.github.com/user",
         headers: {
-            accept: 'application/json',
-            authorization: "token " + `${accessToken}`
+            Accept: "application/json",
+            Authorization: "token " + `${accessToken}`
         }
     });
 
     const username = result.data.login;
+    console.log("username: " + username);
 
     context.response.redirect("/public/html/Pony.html?username=" + `${username}`);
 };
