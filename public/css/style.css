@@ -1,53 +1,53 @@
 body {
     margin: 0;
-}
-.logo{
-    float: left;
-    margin-left: 100px;
-    margin-top: 30px;
-    position: absolute;
+    background: #333333;
 }
 
 .header {
-    width: 80%;
+    width: 90%;
     height: 100px;
 
 }
+/*顶部主标签栏的css样式*/
 .header_ul {
     float: right;
     list-style: none;
-    color:gray;
+    background-color: #333333;
+    margin-right: 40px;
 }
+
 .header_ul li {
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
     float: left;
+    background-color: #333333;
+}
+/*顶级标签的按钮样式*/
+.li_button{
+    background:#333333;
+    height: 50px;
+    border: 0;
+    font-size: 15px;
+    color:white;
+    text-align: center;
 }
 
-.header_ul li:hover {
-    color: saddlebrown;
+.li_button:hover{
+    border-top: 3px white solid ;
 }
 
-.href{
-    color:gray;
-    text-decoration:none
-}
-
-.href:hover{
-    color:gray;
-    text-decoration:none
-}
+/*标签栏的次级标签css样式*/
 .header_ul_ul {
-    width: 70px;
+    width: 30px;
     text-align: center;
     position: absolute;
-    list-style-type : circle;
-    color: black;
+    list-style-type : none;
+    color: white;
 }
 
 .header_ul_ul li {
-    width: 70px;
-    margin: 10px -35px 10px -10px;
+    width: 100px;
+    margin: 10px -35px 10px -55px;
     float: none;
     text-align: center;
 }
@@ -63,9 +63,10 @@ body {
     display: none;
 }
 
+/*导航栏的下拉框的css样式*/
 .header_ul_sign .header_ul_ul {
-    background: white;
-    margin-left: -10px;
+    background: #333333;
+    margin-left: 5px;
     display: none;
 }
 .header_ul_home .header_ul_ul {
@@ -84,6 +85,25 @@ body {
     display: block;
 }
 
+/*下拉标签栏样式设计*/
+.li_li_button{
+    width: 100px;
+    background: #333333;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.li_li_button:hover{
+    border-left: 2px white solid;
+    background: rgba(24, 5, 5, 0.64);
+}
+
+.header_li_img{
+    top:5px;
+    position: relative;
+}
+
 .main{
     margin-top: 20px;
 }
@@ -92,9 +112,131 @@ body {
     margin-left: 5px;
     margin-right: 5px;
 }
-.button{
+/*主界面登录方式按钮的格式*/
+.button_main{
     margin-left: 100px;
     margin-top: 30px;
     height: 105px;
     width: 188px;
+}
+.button_main:hover{
+    border: 2px white solid;
+}
+
+/*页脚格式设计*/
+.footer{
+    margin-left: 100px;
+    width: 80%;
+    position: absolute;
+    margin-bottom: -10px;
+}
+
+.footer_href{
+    color:gray;
+    text-decoration:none
+}
+
+.footer_href:hover{
+    color:goldenrod;
+    text-decoration:underline;
+}
+
+.main_h1{
+    margin-left:200px;
+    margin-top:30px;
+    color: #DDBB74;
+    font-family: 幼圆, serif;
+}
+
+.main_h2{
+    margin-left:200px;
+    margin-top:30px;
+    color: #DDBB74;
+    font-family: 幼圆, serif;
+}
+
+.main_h3{
+    margin-left:200px;
+    margin-top:30px;
+    color: #DDBB74;
+    font-family: 幼圆, serif;
+}
+.main_h3_write{
+    margin-left:200px;
+    margin-top:30px;
+    color: white;
+    font-family: 幼圆, serif;
+}
+
+.help_p{
+    margin-left:250px;
+    font-size: 23px;
+    color:white;
+    font-family: 华文仿宋, serif;
+}
+
+.control_img{
+    height: 23px;
+    background-color: white;
+    position: relative;
+    top:5px;
+}
+.about_href{
+    color:#BE6933
+}
+.about_href:hover{
+    color: #E6B494;
+}
+.about_divArea{
+    width: 931px;
+}
+
+.about_developers_table{
+    margin-left:250px;
+}
+
+.about_develops_img{
+    height:129px;
+    width: 129px;
+}
+.about_developers_name{
+    height: 50%;
+}
+.about_nameFont{
+    font-size:24px;
+    color: white;
+    font-family: "微软雅黑", serif;
+}
+.div_right{
+    position: fixed;
+    top: 150px;
+    width: 180px;
+    height: 280px;
+    text-align: center;
+    border: none;
+    background-color: #333333;
+    right: 10px;
+}
+
+.right_p{
+    font-size: 15px;
+    color: wheat;
+    font-family: 幼圆, serif;
+}
+
+.control_key{
+    background-color:white;
+    border-radius: 5px;
+    border-right: gray 2px solid;
+    border-bottom: gray 3px solid;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    font-family: 幼圆;
+    margin-right: 2px;
+}
+
+.avatar{
+    border-radius: 50%;
 }
