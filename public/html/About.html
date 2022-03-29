@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8" />
     <title>关于游戏</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-
+    <link rel="stylesheet" type="text/css"  href="../css/style.css" />
+    <script type="text/javascript" src="../../src/js/about-pay.js"></script>
 </head>
 <body>
 <!--页面导航栏-->
@@ -44,6 +44,22 @@
     <h1 class="main_h1">联系</h1>
     <p class="help_p">如果您有任何问题或技术疑问，请参照我们的<a href="Help.html" class="about_href">HELP</a>。</p>
     <p class="help_p">如果您有其他问题，请QQ联系。</p>
+    <h1 class="main_h1">支持我们</h1>
+    <p class="help_p">如果您认为我们项目发展前景良好，并且想要支持我们的运行和发展，请考虑支持我们。</p>
+
+    <div>
+        <a href="javascript:void(0)" onclick="displayWindows()">
+            <button class="about_button01" title="click it" >支持我们！
+            </button>
+        </a>
+    </div>
+    <div id="window" class="window_css">
+                <img href="javascript:void(0)" onclick="hideWindows()" class="about_payimg"
+                     src="../../assets/images/support_us/alipay.jpg" >
+    </div>
+    <!--    背景变暗-->
+    <div id="shadow" class="shadow_css"></div>
+
     <h1 class="main_h1">技术</h1>
     <p class="help_p">整个聊天互动游戏是基于html5编写。使用Koa处理后端的GitHub登录，<a href="http://koajs.com/" class="about_href">Koa</a>是下一代的 Node.js 的 Web 框架。由 Express
         团队设计。旨在提供一个更小型、更富有表现力、更可靠的 Web 应用和 API 的开发基础。<br>服务器是通过<a href="https://nodejs.org/en/" class="about_href">Node.js</a>实现的，node 是一个基于 V8 引擎的 Javascript 运行环境，它使得 Javascript 可以运行在服务端，直接与操作系统进行交互，与文件控制、
@@ -55,13 +71,13 @@
     <table>
         <tr>
             <td>
-                <table border="0" class="about_developers_table" cellspacing="0" cellpadding="0">
+                <table border="0" class="about_developers_table"   cellspacing="0" cellpadding="0">
                     <tr >
                         <td colspan="2" rowspan="2" width="64.5px"><img class="avatar" src="../../assets/images/avatar-developer/smz.jpg" ></td>
-                        <td width="129px"> <p class="about_nameFont">宋明泽</p></td>
+                        <td width="129px" class="about_nameFont">宋明泽</td>
                     </tr>
                     <tr>
-                        <td width="129px"><p class="about_nameFont">QQ:1589635180</p></td>
+                        <td width="129px" class="about_nameFont">QQ:1589635180</td>
                     </tr>
                 </table>
             </td>
@@ -69,23 +85,24 @@
                 <table border="0" class="about_developers_table2" cellspacing="0" cellpadding="0">
                     <tr >
                         <td colspan="2" rowspan="2" width="64.5px"><img class="avatar" src="../../assets/images/avatar-developer/qdq.jpg" ></td>
-                        <td width="129px"> <p class="about_nameFont">齐德泉</p></td>
+                        <td width="129px" class="about_nameFont">齐德泉</td>
                     </tr>
                     <tr>
-                        <td width="129px"><p class="about_nameFont">QQ:239532392</p></td>
+                        <td width="129px" class="about_nameFont">QQ:239532392</td>
                     </tr>
                 </table>
             </td>
         </tr>
+
         <tr>
             <td>
                 <table border="0" class="about_developers_table" cellspacing="0" cellpadding="0">
                     <tr >
                         <td colspan="2" rowspan="2" width="64.5px"><img class="avatar" src="../../assets/images/avatar-developer/sjx.jpg" ></td>
-                        <td width="129px"> <p class="about_nameFont">申健旭</p></td>
+                        <td width="129px" class="about_nameFont">申健旭</td>
                     </tr>
                     <tr>
-                        <td width="129px"><p class="about_nameFont">QQ:413236604</p></td>
+                        <td width="129px" class="about_nameFont">QQ:413236604</td>
                     </tr>
                 </table>
             </td>
@@ -93,10 +110,10 @@
                 <table border="0" class="about_developers_table2" cellspacing="0" cellpadding="0">
                     <tr >
                         <td colspan="2" rowspan="2" width="64.5px"><img class="avatar" src="../../assets/images/avatar-developer/syh.jpg" ></td>
-                        <td width="129px"> <p class="about_nameFont">孙元昊</p></td>
+                        <td width="129px" class="about_nameFont">孙元昊</td>
                     </tr>
                     <tr>
-                        <td width="129px"><p class="about_nameFont">QQ:2230692949</p></td>
+                        <td width="129px" class="about_nameFont">QQ:2230692949</td>
                     </tr>
                 </table>
             </td>
@@ -106,10 +123,10 @@
                 <table border="0" class="about_developers_table" cellspacing="0" cellpadding="0">
                     <tr >
                         <td colspan="2" rowspan="2" width="64.5px"><img class="avatar" src="../../assets/images/avatar-developer/tzl.jpg" ></td>
-                        <td width="129px"> <p class="about_nameFont">田振龙</p></td>
+                        <td width="129px" class="about_nameFont">田振龙</td>
                     </tr>
                     <tr>
-                        <td width="129px"><p class="about_nameFont">QQ:1213754902</p></td>
+                        <td width="129px" class="about_nameFont">QQ:1213754902</td>
                     </tr>
                 </table>
             </td>
@@ -117,10 +134,10 @@
                 <table border="0" class="about_developers_table2" cellspacing="0" cellpadding="0">
                     <tr >
                         <td colspan="2" rowspan="2" width="64.5px"><img class="avatar" src="../../assets/images/avatar-developer/sbq.jpg" ></td>
-                        <td width="129px"> <p class="about_nameFont">宋冰倩</p></td>
+                        <td width="129px" class="about_nameFont">宋冰倩</td>
                     </tr>
                     <tr>
-                        <td width="129px"><p class="about_nameFont">QQ:1773204202</p></td>
+                        <td width="129px" class="about_nameFont">QQ:1773204202</td>
                     </tr>
                 </table>
             </td>
