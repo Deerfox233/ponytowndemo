@@ -6,6 +6,7 @@ const path = require("path");                        //Node.js Path 模块
 const serve = require("koa-static");              //处理静态资源
 const route = require("koa-route");              //路由
 const axios = require("axios");                     //创建、发送请求
+const db = require("./src/ts/db");
 
 const app = new Koa();
 
@@ -36,7 +37,11 @@ const oauth = async context => {
     });
 
     const username = result.data.login;
+    const ID = result.data.id;
+    console.log("ID: " + ID);
     console.log("username: " + username);
+    //写入数据库
+    db(ID, username);
 
     context.response.redirect("/public/html/Pony.html?username=" + `${username}`);
 };
