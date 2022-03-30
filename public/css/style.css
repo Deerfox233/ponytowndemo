@@ -181,12 +181,15 @@ body {
     position: relative;
     top:5px;
 }
+
 .about_href{
     color:#BE6933
 }
+
 .about_href:hover{
     color: #E6B494;
 }
+
 .about_divArea{
     width: 931px;
 }
@@ -199,14 +202,17 @@ body {
     height:129px;
     width: 129px;
 }
+
 .about_developers_name{
     height: 50%;
 }
+
 .about_nameFont{
     font-size:24px;
     color: white;
     font-family: "微软雅黑", serif;
 }
+
 .div_right{
     position: fixed;
     top: 150px;
@@ -233,7 +239,7 @@ body {
     font-weight: bold;
     font-size: 17px;
     text-align: center;
-    font-family: 幼圆;
+    font-family: 幼圆, serif;
     margin-right: 2px;
 }
 

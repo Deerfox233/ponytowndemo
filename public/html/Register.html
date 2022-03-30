@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<!--<script>-->
+<!--    const IDField = document.getElementById("IDField");-->
+<!--    const passwordField = document.getElementById("passwordField");-->
+<!--    const confirmField = document.getElementById("confirmField");-->
+<!--    const agreeCheckbox = document.getElementById("agreeCheckbox");-->
+<!--    function validate() {-->
+<!--        if (passwordField.value === confirmField.value) {-->
+<!--            document.getElementById("tishi").innerHTML = '<span style=\'color: green\'>两次密码相同</span>';-->
+<!--            document.getElementById("reg_button").disabled = false;-->
+<!--        } else {-->
+<!--            document.getElementById("tishi").innerHTML = "<span style='color: red'>两次密码不相同</span>";-->
+<!--            document.getElementById("reg_button").disabled = true;-->
+<!--        }-->
+<!--    }-->
+<!--    function check(){-->
+<!--        if (IDField.value === "" || passwordField.value === "" || confirmField.value === "") {-->
+<!--            alert("您未输入账号或密码！");-->
+<!--            return false;-->
+<!--        } else {-->
+<!--            return true;-->
+<!--        }-->
+<!--    }-->
+<!--    function check_box(){-->
+<!--        if (agreeCheckbox.checked === true) {-->
+<!--            document.getElementById("reg_button").disabled = false;-->
+<!--            document.getElementById("tishi_2").innerHTML = "<span style='color: red'></span>";-->
+<!--        } else {-->
+<!--            document.getElementById("reg_button").disabled = true;-->
+<!--            document.getElementById("tishi_2").innerHTML = "<span style='color: red'>您未勾选</span>";-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+<body style="background-color: #333333">
+<div class="header" >
+    <ul class="header_ul">
+        <li class="header_ul_home"><a href="Home.html" class="href" title="官网主页">🏠HOME</a></li>
+
+        <li class="header_ul_help"><a href="Help.html" class="href" title="帮助文档">🤝HELP</a></li>
+
+        <li class="header_ul_about"><a href="About.html" class="href" title="关于游戏">❓ABOUT</a></li>
+
+        <li class="header_ul_sign" style="color: white" title="登录方式">SIGN IN👇
+            <ul class="header_ul_ul">
+                <li>QQ</li>
+                <li>Google</li>
+                <li>GitHub</li>
+                <li>Facebook</li>
+                <li>Phone</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="main_reg" align="center">
+    <img src="../../assets/images/button/R-C-button.png" height="200px" alt="logo.png">
+<!--    <form action="Pony.html">-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td width="100px"><span style="color: aliceblue">账号</span></td>-->
+<!--                <td><input type="text" id="IDField"><td><br>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td width="100px"><span style="color: aliceblue">密码</span></td>-->
+<!--                <td><input type="text" id="passwordField"><br>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td width="100px"><span style="color: aliceblue">确认密码</span></td>-->
+<!--                <td><input type="text" id="confirmField" onkeyup="validate()"></td><br>-->
+<!--                <td><span id="tishi"></span></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div align="center">-->
+<!--                        <input id="reg_button" type="submit" value="注册">-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--        <input type="checkbox" id="agreeCheckbox" checked=checked onclick="check_box()">-->
+<!--        <label style="color: aliceblue">登录或完成注册即代表你同意 <a style="color: goldenrod" href="Terms-of-Use.html">[用户协议]</a>和<a-->
+<!--                style="color: goldenrod" href="Privacy-Policy.html">[隐私政策]</a></label>-->
+<!--        <span id="tishi_2"></span>-->
+<!--    </form>-->
+    <div align="center">
+        <table>
+            <tr>
+                <td><span style="color: aliceblue">Github ID</span></td>
+                <td><input type="text" id="IDField"></td>
+            </tr>
+            <tr>
+                <td><span style="color: aliceblue">昵称</span></td>
+                <td><input type="text" id="nameField"></td>
+            </tr>
+        </table>
+        <div align="center">
+            <button onclick="check()">注册</button>
+        </div>
+        <label>
+            <input type="checkbox" id="agreeCheckbox">
+            <span style="color: aliceblue">
+                完成注册即代表你同意<a style="color: goldenrod" href="Terms-of-Use.html">[用户协议]</a>和<a style="color: goldenrod" href="Privacy-Policy.html">[隐私政策]</a>
+            </span>
+        </label>
+    </div>
+ </div>
+</body>
+<script>
+    const IDField = document.getElementById("IDField");
+    const nameField = document.getElementsById("nameField");
+    const agreeCheckbox = document.getElementById("agreeCheckbox");
+
+    function check() {
+
+    }
+</script>
+</html>

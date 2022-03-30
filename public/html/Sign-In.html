@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/ponyentrancecss.css" />
+</head>
+<script>
+    function check(){
+        var ck=document.getElementById("ck").checked;
+        if(ck===true){
+            document.getElementById("reg_button2").disabled = false;
+            document.getElementById("tishi_2").innerHTML="<font color='red'></font>"
+        } else{
+            document.getElementById("reg_button2").disabled = true;
+            document.getElementById("tishi_2").innerHTML="<font color='red'>您未勾选</font>"
+        }
+    }
+</script>
+<body style="background-color: #333333">
+<div class="header" >
+    <ul class="header_ul">
+        <li class="header_ul_home"><a href="Home.html" class="href" title="官网主页">🏠HOME</a></li>
+
+        <li class="header_ul_help"><a href="Help.html" class="href" title="帮助文档">🤝HELP</a></li>
+
+        <li class="header_ul_about"><a href="About.html" class="href" title="关于游戏">❓ABOUT</a></li>
+
+        <li class="header_ul_sign" style="color: white" title="登录方式">SIGN IN👇
+            <ul class="header_ul_ul">
+                <li>QQ</li>
+                <li>Google</li>
+                <li>GitHub</li>
+                <li>Facebook</li>
+                <li>Phone</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="main_reg" align="center">
+    <img src="../../assets/images/button/logo-2.png">
+    <form method="post" action="select">
+        <table>
+            <tr>
+                <td width="100px"><lable><span style="color: aliceblue">账号</span></lable></td>
+                <td><input type="text" name="user"><td><br>
+            </tr>
+            <tr>
+                <td width="100px"><lable><span style="color: aliceblue">密码</span></lable></td>
+                <td><input type="text" id="pwd" name="password"><td><br>
+            </tr>
+        </table>
+        <div class="reg_sign in" align="center">
+            <input id="reg_button1" type="button" value="注册" onclick="location.href='register.html'" >
+            <input id="reg_button2" type="submit" value="登录">
+        </div>
+            <input type="checkbox" id="ck" value="ck"  checked=checked onclick="check()">
+            <lable style="color: aliceblue">登录或完成注册即代表你同意 <a style="color: goldenrod" href="用户协议.html">[用户协议]</a>>和<a style="color: goldenrod" href="隐私政策.html">[隐私政策]</a></lable>
+            <span id="tishi_2"></span>
+    </form>
+</div>
+</body>
+</html>
