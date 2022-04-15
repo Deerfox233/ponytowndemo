@@ -43,6 +43,8 @@ const oauth = async context => {
     //写入数据库
     db(ID, username);
 
+    //重定向
+    // context.response.redirect("/public/html/Register.html?github_id=" + `${ID}`);
     context.response.redirect("/public/html/Pony.html?username=" + `${username}`);
 };
 
