@@ -16,7 +16,7 @@
 
         <li class="header_ul_help"><a href="Help.html" class="href" title="帮助文档"><button class="li_button" >HELP🤝</button></a></li>
 
-        <li class="header_ul_about"><a href="About.html" class="href" title="关于游戏"><button class="li_button" >ABOUT❓</button></a></li>
+        <li class="header_ul_about" style="border-top:1px white solid"><a href="About.html" class="href" title="关于游戏"><button class="li_button" >ABOUT❓</button></a></li>
 
         <li class="header_ul_sign" style="color: white"><button class="li_button" >SIGN IN👇</button>
             <ul class="header_ul_ul">
@@ -40,12 +40,12 @@
 
 <div class="about_divArea">
     <h1 class="main_h1">关于</h1>
-    <p class="help_p">多人休闲互动聊天的游戏</p>
+    <p class="about_p">多人休闲互动聊天的游戏</p>
     <h1 class="main_h1">联系</h1>
-    <p class="help_p">如果您有任何问题或技术疑问，请参照我们的<a href="Help.html" class="about_href">HELP</a>。</p>
-    <p class="help_p">如果您有其他问题，请QQ联系。</p>
+    <p class="about_p">如果您有任何问题或技术疑问，请参照我们的<a href="Help.html" class="about_href">HELP</a>。</p>
+    <p class="about_p">如果您有其他问题，请QQ联系。</p>
     <h1 class="main_h1">支持我们</h1>
-    <p class="help_p">如果您认为我们项目发展前景良好，并且想要支持我们的运行和发展，请考虑支持我们。</p>
+    <p class="about_p">如果您认为我们项目发展前景良好，并且想要支持我们的运行和发展，请考虑支持我们。</p>
 
     <div>
         <a href="javascript:void(0)" onclick="displayWindows()">
@@ -65,14 +65,14 @@
     <div id="shadow" class="shadow_css"></div>
 
     <h1 class="main_h1">技术</h1>
-    <p class="help_p">整个聊天互动游戏是基于html5编写。使用Koa处理后端的GitHub登录，<a href="http://koajs.com/" class="about_href">Koa</a>是下一代的 Node.js 的 Web 框架。由 Express
+    <p class="about_p">整个聊天互动游戏是基于html5编写。使用Koa处理后端的GitHub登录，<a href="http://koajs.com/" class="about_href">Koa</a>是下一代的 Node.js 的 Web 框架。由 Express
         团队设计。旨在提供一个更小型、更富有表现力、更可靠的 Web 应用和 API 的开发基础。<br>服务器是通过<a href="https://nodejs.org/en/" class="about_href">Node.js</a>实现的，node 是一个基于 V8 引擎的 Javascript 运行环境，它使得 Javascript 可以运行在服务端，直接与操作系统进行交互，与文件控制、
         网络交互、进程控制等。简单的说node.js就是运行在服务端的 JavaScript。</p>
     <h1 class="main_h1">团队</h1>
     <h2 class="main_h3_write">开发人员</h2>
 
 <!--  大表格2*3放6个人   每个小表格放图片和信息     -->
-    <table>
+    <table id="creator" style="margin-left: -200px;">
         <tr>
             <td>
                 <table border="0" class="about_developers_table"   cellspacing="0" cellpadding="0">
@@ -161,9 +161,10 @@
 
 </div>
 <!--页面的页脚-->
-<footer class="footer" style="color: gray">
+<footer class="footer">
     <p>Version: 0.1.0-Demo</p>
-    <p>Creator Team: <a href="About.html" class="footer_href">5+1</a> </p>
-</footer>
+    <p>Creator Team: <a href="About.html#creator" class="footer_href">5+1</a> </p>
+  </footer>
+  
 </body>
 </html>
