@@ -42,7 +42,8 @@
         //     ori.style.backgroundPosition = animationPhase + "px";
         // }
     </script>
-    <style>
+
+    <style>/*****style**********style************style********style**********style*******style**********************/
         body {
             /*background-color: #90ee90;*/
             background: url("../../assets/images/map/map-zzuli.png");
@@ -67,7 +68,43 @@
             height: 100px;
             mix-blend-mode: soft-light;
         }
+        /* 聊天悬浮窗 */
+        #div_chat {
+            position: fixed;
+            top: 540px;
+            width: 540px;
+            height: 160px;
+            border: none;
+            background-color: #333333;
+            z-index: 10;
+            /* 为mozilla firefox 设置透明度  */
+            -moz-opacity: 0.6;
+            /* 设置透明度 */
+            opacity: .60;
+            /* 为IE 设置透明度  */
+            filter: alpha(opacity=66);
+            left: 10px;
+            /* 字体样式 */
+            text-align: center;
+            font-size: 15px;
+            color: wheat;
+            font-family: 幼圆;
+        }
+        #div_textArea{
+            height: 40px;
+            width: 320px;
+        }
+        #div_button-chat{
+            height: 45px;
+            width: 50px;
+        }
+        #div_chatlocation{
+            margin-top: 32px;
+            margin-left: 75px;
+        }
+    /*****style**********style************style********style**********style*******style**********************
     </style>
+
 </head>
 <body onkeydown="moveEvent(event);">
     <div id="move">
@@ -78,6 +115,21 @@
         </div>
         <div id="ori"></div>
         <div id="username"></div>
+    </div>
+
+    <!-- 聊天悬浮窗 -->
+    <div id="div_chat">
+        <h1>---请输入聊天内容---</h1>
+        <div id="div_chatlocation">
+            <table>
+                <td>
+                    <textarea id="div_textArea"></textarea>
+                </td>
+                <td>
+                    <button id="div_button-chat">Enter</button>
+                </td>
+            </table>
+        </div>
     </div>
 </body>
 <script>
