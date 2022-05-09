@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<!--页面导航栏-->
+<div class="header" >
+    <ul class="header_ul">
+        <li class="header_ul_home" style="border-top:1px white solid"><a href="Home.html" class="href" title="官网主页"><button class="li_button" >HOME🏠</button></a></li>
+
+        <li class="header_ul_help"><a href="Help.html" class="href" title="帮助文档"><button class="li_button" >HELP🤝</button></a></li>
+
+        <li class="header_ul_about"><a href="About.html" class="href" title="关于游戏"><button class="li_button" >ABOUT❓</button></a></li>
+
+        <li class="header_ul_sign" style="color: white"><button class="li_button" >SIGN IN👇</button>
+            <ul class="header_ul_ul">
+                <li><a href="Sign.html"> <small style="color: white">登录</small></a> 或 <a href="Register.html"><small style="color: white">注册</small></a></li>
+                <li><button class="li_li_button" title="通过QQ登录">🐧QQ</button></li>
+                <li><button class="li_li_button" title="通过Google登录"><img src="../../assets/images/tiny/Google-tiny.png" width="20px" height="20px" alt="">Google</button></li>
+                <li><small> 仅 登录</small></li>
+                <li>
+                    <a href="https://www.github.com/login/oauth/authorize?client_id=15f99dde795d4bc02da2">
+                        <button class="li_li_button" title="通过Github登录">
+                            <img src="../../assets/images/tiny/Github-tiny.png" width="20px" height="20px" alt="">GitHub
+                        </button>
+                    </a>
+                </li>
+                <li><button class="li_li_button" title="通过Facebook登录"><img src="../../assets/images/tiny/Facebook-tiny.png" width="20px" height="20px" alt="">Facebook</button></li>
+                <li><button class="li_li_button" title="通过手机号登录">📱Phone</button></li>
+              </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="all">
+    <div class="container left-panel-active" style="margin-top: -200px">
+
+        <!-- 注册 -->
+        <div class="container_form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form_title">注册</h2>
+                <input id="register_name" type="text" placeholder="用户名" class="input" onkeyup="check()"/>
+                <input id="register_pwd" type="password" placeholder="密码" class="input" onkeyup="check()"/>
+                <input id="register_pwd1" type="password" placeholder="确认密码" class="input" onkeyup="check()" />
+                <p><input id="register_rule" type="checkbox" value="ck" checked="checked" onclick="register_checkbox()"/>
+                    注册即代表遵守<a href="#">[用户协议]</a>和<a href="#">[隐私政策]</a></font></p>
+                <span id="reigster_check"></span>
+                <input type="submit" class="btn" value="注册" id="register">
+                
+            </form>
+        </div>
+    
+        <!-- 登录 -->
+        <div class="container_form container--signin">
+            <form action="#" class="form" id="form2" onsubmit="login()">
+                <h2 class="form_title">登录</h2>
+                <input id="login_name" type="text" placeholder="用户名" class="input" />
+                <input id="login_pwd" type="password" placeholder="密码" class="input" />
+                <p><input id="log_rule" type="checkbox" value="ck" checked="checked" onclick="log_checkbox()"/>
+                    登录即代表遵守<a href="#">[用户协议]</a>和<a href="#">[隐私政策]</a></font></p>
+    
+                <span id="log_check"></span>
+    
+                <span class="link">密码忘记了?<a href="#" class="link">找回密码</a></span>
+                <input type="submit" class="btn" value="登录" id="log">
+            </form>
+        </div>
+    
+        <!-- 浮层 -->
+        <div class="container_overlay">
+            <div class="overlay">
+                <div class="overlay_panel overlay--left">
+                    <button class="btn" id="signIn">账号登录</button>
+                </div>
+                <div class="overlay_panel overlay--right">
+                    <button class="btn" id="signUp">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- partial -->
+  <script src="../../src/js/log_register.js"></script>
+</body>
+</html>
