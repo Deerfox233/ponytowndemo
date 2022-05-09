@@ -1,92 +1,90 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="../css/ponyentrancecss.css" />
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<script>
-    function validate() {
-        var pwd = document.getElementById("pwd").value;
-        var pwd_2 = document.getElementById("pwd_2").value;
-        if(pwd === pwd_2) {
-            document.getElementById("tishi").innerHTML='<span style=\'color: green\'>两次密码相同</span>';
-            document.getElementById("reg_button").disabled = false;
-        }
-        else {
-            document.getElementById("tishi").innerHTML="<span style='color: red'; >两次密码不相同</span>";
-            document.getElementById("reg_button").disabled = true;
-        }
-    }
-    function check(){
-        var user = document.getElementById("u");
-        var pwd = document.getElementById("pwd");
-        var pwd_2 = document.getElementById("pwd_2");
-        if (user.value===""||pwd.value===""||pwd_2.value===""){
-            alert("您未输入账号或密码!");
-            return false;
-        } else{
-            return true;
-        }
-    }
-    function check_box(){
-        var ck=document.getElementById("ck").checked;
-        if(ck===true){
-            document.getElementById("reg_button").disabled = false;
-            document.getElementById("tishi_2").innerHTML="<span style='color: red';></span>";
-        } else{
-            document.getElementById("reg_button").disabled = true;
-            document.getElementById("tishi_2").innerHTML="<span style='color: red';>您未勾选</span>";
-        }
-    }
-</script>
-<body style="background-color: #333333">
+
+<body>
+<!--页面导航栏-->
 <div class="header" >
     <ul class="header_ul">
-        <li class="header_ul_home"><a href="Home.html" class="href" title="官网主页">🏠HOME</a></li>
+        <li class="header_ul_home" style="border-top:1px white solid"><a href="Home.html" class="href" title="官网主页"><button class="li_button" >HOME🏠</button></a></li>
 
-        <li class="header_ul_help"><a href="Help.html" class="href" title="帮助文档">🤝HELP</a></li>
+        <li class="header_ul_help"><a href="Help.html" class="href" title="帮助文档"><button class="li_button" >HELP🤝</button></a></li>
 
-        <li class="header_ul_about"><a href="About.html" class="href" title="关于游戏">❓ABOUT</a></li>
+        <li class="header_ul_about"><a href="About.html" class="href" title="关于游戏"><button class="li_button" >ABOUT❓</button></a></li>
 
-        <li class="header_ul_sign" style="color: white" title="登录方式">SIGN IN👇
+        <li class="header_ul_sign" style="color: white"><button class="li_button" >SIGN IN👇</button>
             <ul class="header_ul_ul">
-                <li>QQ</li>
-                <li>Google</li>
-                <li>GitHub</li>
-                <li>Facebook</li>
-                <li>Phone</li>
-            </ul>
+                <li><a href="Sign.html"> <small style="color: white">登录</small></a> 或 <a href="Register.html"><small style="color: white">注册</small></a></li>
+                <li><button class="li_li_button" title="通过QQ登录">🐧QQ</button></li>
+                <li><button class="li_li_button" title="通过Google登录"><img src="../../assets/images/tiny/Google-tiny.png" width="20px" height="20px" alt="">Google</button></li>
+                <li><small> 仅 登录</small></li>
+                <li>
+                    <a href="https:/S/www.github.com/login/oauth/authorize?client_id=15f99dde795d4bc02da2">
+                        <button class="li_li_button" title="通过Github登录">
+                            <img src="../../assets/images/tiny/Github-tiny.png" width="20px" height="20px" alt="">GitHub
+                        </button>
+                    </a>
+                </li>
+                <li><button class="li_li_button" title="通过Facebook登录"><img src="../../assets/images/tiny/Facebook-tiny.png" width="20px" height="20px" alt="">Facebook</button></li>
+                <li><button class="li_li_button" title="通过手机号登录">📱Phone</button></li>
+              </ul>
         </li>
     </ul>
 </div>
-<div class="main_reg" align="center">
-    <img src="../../assets/images/button/logo-2.png">
-    <form method="post" action="add" onsubmit="return check()">
 
-        <table>
-            <tr>
-                <td width="100px"><lable><span style="color: aliceblue">账号</span></lable></td>
-                <td><input type="text" id="u" name="user"><td><br>
-            </tr>
-            <tr>
-                <td width="100px"><lable><span style="color: aliceblue">密码</span></lable></td>
-                <td><input type="text" id="pwd" name="password"><td><br>
-            </tr>
-            <tr>
-                <td width="100px"><lable><span style="color: aliceblue">确认密码</span></lable></td>
-                <td><input type="text" id="pwd_2" name="password" onkeyup="validate()"></td><br>
-                <td><span id="tishi"></span></td>
-            </tr>
-        </table>
+<div class="all">
+    <div class="container right-panel-active" style="margin-top: -200px">
 
-            <div class="reg_submit" align="center" onclick="check()" >
-                <input id="reg_button" type="submit" value="注册" >
+        <!-- 注册 -->
+        <div class="container_form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form_title">注册</h2>
+                <input id="register_name" type="text" placeholder="用户名" class="input" onkeyup="check()"/>
+                <input id="register_pwd" type="password" placeholder="密码" class="input" onkeyup="check()"/>
+                <input id="register_pwd1" type="password" placeholder="确认密码" class="input" onkeyup="check()" />
+                <p><input id="register_rule" type="checkbox" value="ck" checked="checked" onclick="register_checkbox()"/>注册即代表遵守<a href="#">[用户协议]</a>和<a href="#">[隐私政策]</a></font></p>
+                
+                <span id="reigster_check"></span>
+                <input type="submit" class="btn" value="注册" id="register">
+                
+            </form>
+        </div>
+    
+        <!-- 登录 -->
+        <div class="container_form container--signin">
+            <form action="#" class="form" id="form2" onsubmit="login()">
+                <h2 class="form_title">登录</h2>
+                <input id="login_name" type="text" placeholder="用户名" class="input" />
+                <input id="login_pwd" type="password" placeholder="密码" class="input" />
+                <p><input id="log_rule" type="checkbox" value="ck" checked="checked" onclick="log_checkbox()"/>登录即代表遵守<a href="#">[用户协议]</a>和<a href="#">[隐私政策]</a></font></p>
+    
+                <span id="log_check"></span>
+    
+                <span class="link">密码忘记了?<a href="#" class="link">找回密码</a></span>
+                <input type="submit" class="btn" value="登录" id="log">
+            </form>
+        </div>
+    
+        <!-- 浮层 -->
+        <div class="container_overlay">
+            <div class="overlay">
+                <div class="overlay_panel overlay--left">
+                    <button class="btn" id="signIn">账号登录</button>
+                </div>
+                <div class="overlay_panel overlay--right">
+                    <button class="btn" id="signUp">注册</button>
+                </div>
             </div>
-                <input type="checkbox" id="ck" value="ck"  checked=checked onclick="check_box()">
-                <label style="color: aliceblue">登录或完成注册即代表你同意 <a style="color: goldenrod" href="用户协议.html">[用户协议]</a>和<a style="color: goldenrod" href="隐私政策.html">[隐私政策]</a></label>
-                <span id="tishi_2"></span>
-    </form>
+        </div>
+    </div>
+    
 </div>
+
+<!-- partial -->
+<script src="../../src/js/log_register.js"></script>
 </body>
 </html>
