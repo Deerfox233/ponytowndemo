@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" >
     <title>Title</title>
     <link rel="stylesheet" type="text/css"  href="../css/style.css" />
     <script src="../../src/ts/pony-walk.js">
@@ -44,7 +44,7 @@
         // }
     </script>
 </head>
-<body onkeydown="moveEvent(event);" id="pony_background" >
+<body onkeydown="moveEvent(event);" class="pony_background" >
     <div id="move">
         <div id="shade">
             <svg>
@@ -55,22 +55,53 @@
         <div id="username"></div>
     </div>
 
-    <!-- 聊天悬浮窗 -->
-    <div id="div_chat">
-        <h1>---请输入聊天内容---</h1>
-        <div id="div_chatlocation">
+    <div class="div_all-chat"><!--一个大的div包括两个小的div分别是输入聊天内容和聊天内容显示__-->
+        <!-- 聊天悬浮窗 -->
+        <div class="div_chat">
+            <h1>---请输入聊天内容---</h1>
+            <div class="div_chatlocation">
+                <table>
+                    <tr>
+                        <td>
+                            <input id="text_input" type="text" class="div_chatBox">
+                        </td>
+                        <td>
+                            <button class="div_sendButton" onclick="sendMessage()">Enter</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 聊天内容窗 -->
+        <div class="div_chatArea">
             <table>
-                <tr>
-                    <td>
-                        <input type="text" id="div_chatBox">
-                    </td>
-                    <td>
-                        <button id="div_sendButton" onclick="sendMessage()">Enter</button>
-                    </td>
-                </tr>
+                <td>
+                    <div class="div_chatArea_left">
+            <pre>
+                <h1>广</h1><h1>告</h1><h1>招</h1><h1>商</h1>
+            </pre>
+                    </div>
+                </td>
+                <td>
+                    <div class="div_chatArea_right"><!-- 此处为聊天内容-->
+                        <div class="chatArea_text"><!-- 此div用来装聊天内容-->
+                            <span >
+                              时间：123456789 姓名：   123123
+                        </span><br>
+                            <span >
+                              123456789
+                        </span><br>
+                            <span >
+                              17:59 syh:*********************
+                        </span><br>
+                        </div>
+
+                    </div>
+                </td>
             </table>
         </div>
     </div>
+
 </body>
 <script src="../../src/chat.js"></script>
 <script>
