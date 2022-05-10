@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../css/style.css" />
     <script src="../../src/ts/pony-walk.js">
         // let animationPhase = 0;
         // let isReverse;
@@ -42,71 +43,8 @@
         //     ori.style.backgroundPosition = animationPhase + "px";
         // }
     </script>
-
-    <style>/*****style**********style************style********style**********style*******style**********************/
-        body {
-            /*background-color: #90ee90;*/
-            background: url("../../assets/images/map/map-zzuli.png");
-            background-position: -500px,-500px;
-            /*background-color: cornflowerblue;*/
-        }
-        #move {
-            position: absolute;
-            left: 480px;
-            top: 465px;
-        }
-        #ori {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-image: url("../../assets/images/character/ori_walk.png");
-            background-position: -0px;
-        }
-        #shade {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            mix-blend-mode: soft-light;
-        }
-        /* 聊天悬浮窗 */
-        #div_chat {
-            position: fixed;
-            top: 540px;
-            width: 540px;
-            height: 160px;
-            border: none;
-            background-color: #333333;
-            z-index: 10;
-            /* 为mozilla firefox 设置透明度  */
-            -moz-opacity: 0.6;
-            /* 设置透明度 */
-            opacity: .60;
-            /* 为IE 设置透明度  */
-            filter: alpha(opacity=66);
-            left: 10px;
-            /* 字体样式 */
-            text-align: center;
-            font-size: 15px;
-            color: wheat;
-            font-family: 幼圆;
-        }
-        #div_textArea{
-            height: 40px;
-            width: 320px;
-        }
-        #div_button-chat{
-            height: 45px;
-            width: 50px;
-        }
-        #div_chatlocation{
-            margin-top: 32px;
-            margin-left: 75px;
-        }
-    /*****style**********style************style********style**********style*******style**********************
-    </style>
-
 </head>
-<body onkeydown="moveEvent(event);">
+<body onkeydown="moveEvent(event);" id="pony_background">
     <div id="move">
         <div id="shade">
             <svg>
