@@ -1,6 +1,6 @@
-html,
-body {
-    background: #333333;
+html{
+    height: 100%;
+    position: relative;
 }
 
 .body_main{
@@ -595,7 +595,7 @@ body {
 /* 聊天悬浮窗 */
 #div_chat {
     position: fixed;
-    top: 540px;
+    top: 70%;
     width: 540px;
     height: 160px;
     border: none;
