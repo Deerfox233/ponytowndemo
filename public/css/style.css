@@ -155,7 +155,7 @@ body {
 /* 帮助文档中左侧内容设计 */
 .help_left{
     float: left;
-    margin:10px 0px 0px 200px;
+    margin:10px 0px 0px 300px;
     min-height: 100%;
     height: auto !important;
     padding-bottom: 60px;
@@ -166,7 +166,7 @@ body {
 /* 帮助文档中右侧内容设计 */
 .help_right{
     float: right;
-    margin:40px 210px 0px 30px;
+    margin:40px 360px 0px 20px;
     min-height: 100%;
     height: auto !important;
     padding-bottom: 60px;
