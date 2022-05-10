@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const colors = require("colors");
 const Schema = mongoose.Schema;
 
-console.log("启动数据库...");
-mongoose.connect("mongodb://localhost/ponytowndemo").then(() => console.log("数据库连接成功"));
+console.log(colors.gray("启动数据库..."));
+mongoose.connect("mongodb://localhost/ponytowndemo").then(() => console.log(colors.gray("数据库连接成功")));
 
 // schemas
 const userSchema = new Schema({
@@ -13,9 +14,11 @@ const userSchema = new Schema({
 // models
 const User = mongoose.model("User", userSchema);
 
-module.exports = (ID: number, name: string) => {
-    new User({
+// 向module.export 对象挂载 db 方法
+module.exports.addUser = (ID: number, name: string) => {
+    let user = new User({
         id: ID,
         name: name
-    }).save().then(() => console.log("新增一条 user 数据"));
+    });
+    user.save().then(() => console.log(colors.blue("新增一条 user 数据")));
 };

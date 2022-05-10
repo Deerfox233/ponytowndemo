@@ -60,16 +60,19 @@
         <h1>---请输入聊天内容---</h1>
         <div id="div_chatlocation">
             <table>
-                <td>
-                    <textarea id="div_textArea"></textarea>
-                </td>
-                <td>
-                    <button id="div_button-chat">Enter</button>
-                </td>
+                <tr>
+                    <td>
+                        <input type="text" id="div_chatBox">
+                    </td>
+                    <td>
+                        <button id="div_sendButton" onclick="sendMessage()">Enter</button>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>
 </body>
+<script src="../../src/chat.js"></script>
 <script>
     let username = window.location.search.substring(1);
     username = username.split("=")[1];
