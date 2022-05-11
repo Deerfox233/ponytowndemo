@@ -667,7 +667,7 @@ div_chat::before{
     width: 446px;
     height: 378px;
 }
-.chatArea_text{
+#chatArea_text{
     /*background-color: #F96955;   !*作用同上*!*/
     padding-top: 68%;
     font-size: 23px;
