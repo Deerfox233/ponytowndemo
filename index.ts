@@ -60,7 +60,7 @@ const accept = (context, next) => {
     context.websocket.on("message", message => {
         console.log(colors.yellow("%s"), message);
         for (let i: number = 0; i < contexts.length; i++) {
-            contexts[i].websocket.send(message);
+            contexts[i].websocket.send(JSON.stringify(message));
         }
     });
 };

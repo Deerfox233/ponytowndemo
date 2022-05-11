@@ -622,7 +622,7 @@ div_chat::before{
     z-index: -1;
     margin: -30px;
 }
-.div_chatBox {
+#div_chatBox {
     height: 40px;
     width: 320px;
 }
